@@ -1,28 +1,47 @@
-﻿using System.Collections;
+﻿using Assets;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Paint : MonoBehaviour
 {
-    public int textureWidth = 20;
-    public int textureHeight = 20;
-
-    public Color paintColor = Color.green;
-    public Color backgroundColor = Color.white;
-
     Texture2D texture;
+    IFigureDraw figureDraw;
+    public int textureWidth = 50;
+    public int textureHeight = 50;
+    public int brushSize = 10;
+    public Color brushColor = Color.green;
+    public Color backgroundColor = Color.white;
+    public Slider slider;
+    public ColorPicker picker;
 
-  
-    //Paints on ray-collided object
-    void WhileMousePressed()
+    public void ChangeSlider(Slider slider)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hitInfo;
-        if (Physics.Raycast(ray, out hitInfo))
+        brushSize = Mathf.RoundToInt(slider.value);
+    }
+
+    public void CreateCanvas()
+    {
+        texture = new Texture2D(textureWidth, textureHeight);
+        texture.filterMode = FilterMode.Point;
+        GetComponent<MeshRenderer>().material.SetTexture("_MainTex", texture);
+    }
+
+    public void UploadCanvas()
+    {
+
+    }
+
+    void Fill(Color color)
+    {
+        Color[] pixels = texture.GetPixels();
+        for (var i = 0; i < pixels.Length; i++)
         {
-            var pixelCoords = uv2PixelCoords(hitInfo.textureCoord);
-            Painter(pixelCoords, paintColor);
+            pixels[i] = color;
         }
+        texture.SetPixels(pixels);
+        texture.Apply();
     }
 
     //
@@ -61,33 +80,37 @@ public class Paint : MonoBehaviour
 
     void Painter (Vector2Int pixelCoords, Color color)
     {
-            texture.SetPixel(pixelCoords.x, pixelCoords.y,  paintColor);
-            texture.Apply();
-        
-    }
-    
-    void CreateTexture() {
-        texture = new Texture2D(textureWidth, textureHeight);
-        texture.filterMode = FilterMode.Point;
-        GetComponent<MeshRenderer>().material.SetTexture("_MainTex", texture);
+        figureDraw = new RectangleBrush();
+        figureDraw.DrawFigure(brushSize, color);
+        int width = (int)Mathf.Sqrt(brushSize);
+        int height = width;
+        texture.SetPixels(pixelCoords.x, pixelCoords.y, width, height, figureDraw.GetColors());
+        texture.Apply();
     }
 
-    void Fill(Color color)
+    //Paints on ray-collided object
+    void WhileMousePressed()
     {
-        Color[] pixels = texture.GetPixels();
-        for (var i = 0; i < pixels.Length; i++)
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hitInfo;
+        if (Physics.Raycast(ray, out hitInfo))
         {
-            pixels[i] = color;
+            var pixelCoords = uv2PixelCoords(hitInfo.textureCoord);
+            Painter(pixelCoords, brushColor);
         }
-        texture.SetPixels(pixels);
-        texture.Apply();
     }
 
     private void Start()
     {
-        CreateTexture();
+        CreateCanvas();
         ResizeCanvas(textureWidth, textureHeight);
         Fill(backgroundColor);
+
+        picker.onValueChanged.AddListener(color =>
+        {
+            brushColor = color;
+            Debug.Log(color);
+        });
     }
 
     // Update is called once per frame
@@ -97,6 +120,10 @@ public class Paint : MonoBehaviour
         {
             WhileMousePressed();
         }
+
+        //Was trying to change brushSize by using OnValueChange,
+        //but can't because of bug (not displaying dynamic floats)
+        brushSize = Mathf.RoundToInt(slider.value);
     }
 
 }
