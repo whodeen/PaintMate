@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 479, y: 444}
   m_MaxSize: {x: 8004, y: 8044}
   vertical: 0
-  controlID: 9633
+  controlID: 390
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 9634
+  controlID: 391
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,9 +193,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.267397, y: 324.74066, z: -305.13977}
+    m_Target: {x: 316.75827, y: 317.10797, z: -388.75293}
     speed: 2
-    m_Value: {x: -4.267397, y: 324.74066, z: -305.13977}
+    m_Value: {x: 316.75827, y: 317.10797, z: -388.75293}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -224,13 +224,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.06745742, y: 0.00658311, z: -0.0004477686, w: -0.9977137}
+    m_Target: {x: -0.043479428, y: 0.027568515, z: -0.0012066114, w: -0.9986901}
     speed: 2
-    m_Value: {x: -0.06745652, y: 0.006583022, z: -0.00044776264, w: -0.9977004}
+    m_Value: {x: -0.04347869, y: 0.027568048, z: -0.001206591, w: -0.9986732}
   m_Size:
-    m_Target: 736.1446
+    m_Target: 752.4798
     speed: 2
-    m_Value: 736.1446
+    m_Value: 752.4798
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -275,8 +275,8 @@ MonoBehaviour:
     y: 222
     width: 982
     height: 519
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -303,10 +303,10 @@ MonoBehaviour:
     y: 0
     width: 554
     height: 741
-  m_MinSize: {x: 277, y: 294}
-  m_MaxSize: {x: 4002, y: 8044}
+  m_MinSize: {x: 277, y: 272}
+  m_MaxSize: {x: 4002, y: 8022}
   vertical: 1
-  controlID: 9628
+  controlID: 371
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -364,7 +364,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8829fffffc2effffd05bffff125dffffda5dffffc0e7ffff484200007a420000
+      m_ExpandedIDs: 6afbffff263000004a300000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -415,7 +415,7 @@ MonoBehaviour:
   - {fileID: 12}
   - {fileID: 13}
   m_Selected: 2
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -455,20 +455,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/HSVPicker/UtilityScripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/HSVPicker/UtilityScripts
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: Q:\Projects\Unity\PaintMate\PaintMate
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 42790000
-    m_LastClickedID: 31042
-    m_ExpandedIDs: 00000000ac3f000000ca9a3b
+    m_SelectedIDs: c82c0000
+    m_LastClickedID: 11464
+    m_ExpandedIDs: 00000000c82c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -496,7 +496,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ac3f000000ca9a3b
+    m_ExpandedIDs: 00000000c82c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -521,9 +521,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a6420000
-    m_LastClickedInstanceID: 17062
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 38300000
+    m_LastClickedInstanceID: 12344
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -614,5 +614,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 12344
+  m_LastVerticalScrollValue: 508

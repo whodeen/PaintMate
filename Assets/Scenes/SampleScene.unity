@@ -288,7 +288,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SaveFile
+  m_Text: Save
 --- !u!222 &393848622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New canvas
+  m_Text: New
 --- !u!222 &498755084
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 1.12e-43, w: 0.2890625}
+  m_BoundingSphereOverride: {x: 0.1015625, y: 0.15234375, z: 0.0078125, w: -0.0078125}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -606,7 +606,7 @@ RectTransform:
   m_Children:
   - {fileID: 498755082}
   m_Father: {fileID: 946061120}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -793,9 +793,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 710727334}
   - {fileID: 978958985}
   - {fileID: 1877627200}
-  - {fileID: 710727334}
   - {fileID: 1136756890}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -900,6 +900,7 @@ GameObject:
   - component: {fileID: 978958988}
   - component: {fileID: 978958987}
   - component: {fileID: 978958986}
+  - component: {fileID: 978958989}
   m_Layer: 5
   m_Name: OpenFileButton
   m_TagString: Untagged
@@ -920,7 +921,7 @@ RectTransform:
   m_Children:
   - {fileID: 1919971083}
   m_Father: {fileID: 946061120}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -969,7 +970,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 978958987}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 978958989}
+        m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &978958987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,6 +1018,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978958984}
   m_CullTransparentMesh: 0
+--- !u!114 &978958989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978958984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbf8d914d4243b44b0314a22e81d142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  imageAsset: {fileID: 0}
+  paintCanvas: {fileID: 1279683514}
+  texture: {fileID: 0}
 --- !u!1 &1070388288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1136756890}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BrushControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1199,7 +1227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279683514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: 1.05, z: -5.89}
+  m_LocalPosition: {x: 0.85, y: 1.05, z: -5.89}
   m_LocalScale: {x: 2.7994566, y: 2.7994566, z: 0.48557}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1217,6 +1245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd554767e4d9a341831acd1ca2b3b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  texture: {fileID: 0}
   textureWidth: 50
   textureHeight: 50
   brushSize: 10
@@ -1449,7 +1478,7 @@ RectTransform:
   m_Children:
   - {fileID: 393848620}
   m_Father: {fileID: 946061120}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2434,7 +2463,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New canvas (From file)
+  m_Text: Open (From file)
 --- !u!222 &1919971085
 CanvasRenderer:
   m_ObjectHideFlags: 0

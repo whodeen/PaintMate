@@ -64,6 +64,8 @@
   <ItemGroup>
     <Compile Include="Assets\Brush.cs" />
     <Compile Include="Assets\CircleBrush.cs" />
+    <Compile Include="Assets\FilePicker.cs" />
+    <Compile Include="Assets\FileSaver.cs" />
     <Compile Include="Assets\HSVPicker\Enums\ColorValues.cs" />
     <Compile Include="Assets\HSVPicker\Events\ColorChangedEvent.cs" />
     <Compile Include="Assets\HSVPicker\Events\HSVChangedEvent.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Assets\HSVPicker\UtilityScripts\HSVUtil.cs" />
     <Compile Include="Assets\IFigureDraw.cs" />
     <Compile Include="Assets\Paint.cs" />
+    <Compile Include="Assets\PaintCanvas.cs" />
     <Compile Include="Assets\RectangleBrush.cs" />
     <None Include="Assets\HSVPicker\Resources\Shaders\Compute\GenerateSVTexture.compute" />
     <None Include="Assets\HSVPicker\README.txt" />

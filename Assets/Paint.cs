@@ -6,18 +6,28 @@ using UnityEngine.UI;
 
 public class Paint : MonoBehaviour
 {
-    Texture2D texture;
+    public Texture2D texture;
     IFigureDraw figureDraw;
     public int textureWidth = 50;
     public int textureHeight = 50;
-    public int brushSize = 10;
+    public int brushSize;
     public Color brushColor = Color.green;
     public Color backgroundColor = Color.white;
     public Slider slider;
     public ColorPicker picker;
 
+
+
     public void ChangeSlider(Slider slider)
     {
+        if (texture.width > texture.height)
+        {
+            slider.maxValue = texture.height;
+        }
+        else
+        {
+            slider.maxValue = texture.width;
+        }
         brushSize = Mathf.RoundToInt(slider.value);
     }
 
@@ -27,11 +37,7 @@ public class Paint : MonoBehaviour
         texture.filterMode = FilterMode.Point;
         GetComponent<MeshRenderer>().material.SetTexture("_MainTex", texture);
     }
-
-    public void UploadCanvas()
-    {
-
-    }
+    
 
     void Fill(Color color)
     {
@@ -49,7 +55,7 @@ public class Paint : MonoBehaviour
     //Changes sides ratio of current object according 
     //to input width and height
     //
-    void ResizeCanvas(float width, float height)
+    public void ResizeCanvas(float width, float height)
     {
         float x; 
         float y;
@@ -81,7 +87,7 @@ public class Paint : MonoBehaviour
     void Painter (Vector2Int pixelCoords, Color color)
     {
         figureDraw = new RectangleBrush();
-        figureDraw.DrawFigure(brushSize, color);
+        figureDraw.DrawFigure(Mathf.FloorToInt(brushSize), color);
         int width = (int)Mathf.Sqrt(brushSize);
         int height = width;
         texture.SetPixels(pixelCoords.x, pixelCoords.y, width, height, figureDraw.GetColors());
