@@ -556,7 +556,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.1015625, y: 0.15234375, z: 0.0078125, w: -0.0078125}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1458,6 +1458,7 @@ GameObject:
   - component: {fileID: 1877627203}
   - component: {fileID: 1877627202}
   - component: {fileID: 1877627201}
+  - component: {fileID: 1877627204}
   m_Layer: 5
   m_Name: SaveFileButton
   m_TagString: Untagged
@@ -1527,7 +1528,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1877627202}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1877627204}
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1877627202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,6 +1576,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877627199}
   m_CullTransparentMesh: 0
+--- !u!114 &1877627204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877627199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0ef169feab77a46ab66b324b1c62de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1279683514}
 --- !u!1001 &1918731036
 PrefabInstance:
   m_ObjectHideFlags: 0
