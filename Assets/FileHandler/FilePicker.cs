@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Windows;
 
 public class FilePicker : MonoBehaviour
 {
@@ -21,9 +18,9 @@ public class FilePicker : MonoBehaviour
         {
             LoadImage();
             paintCanvas.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", texture);
-            paintCanvas.GetComponent<Paint>().ResizeCanvas(texture.height, texture.width);
-            paintCanvas.GetComponent<Paint>().texture = texture;
-            paintCanvas.GetComponent<Paint>().brushSize *= texture.height;
+            paintCanvas.GetComponent<PaintCanvas>().ResizeCanvas(texture.height, texture.width);
+            paintCanvas.GetComponent<PaintInit>().texture = texture;
+            paintCanvas.GetComponent<PaintInit>().brushSize *= texture.height;
         }
     }
 

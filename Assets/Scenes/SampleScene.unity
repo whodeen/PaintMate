@@ -556,7 +556,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: NaN}
+  m_BoundingSphereOverride: {x: -1.114e-42, y: 6e-45, z: 2.4e-44, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -656,7 +656,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1279683519}
+      - m_Target: {fileID: 1279683520}
         m_MethodName: CreateCanvas
         m_Mode: 1
         m_Arguments:
@@ -1030,6 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fbf8d914d4243b44b0314a22e81d142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path: 
   image: {fileID: 0}
   imageAsset: {fileID: 0}
   paintCanvas: {fileID: 1279683514}
@@ -1152,6 +1153,7 @@ GameObject:
   - component: {fileID: 1279683516}
   - component: {fileID: 1279683515}
   - component: {fileID: 1279683519}
+  - component: {fileID: 1279683520}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1245,7 +1247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd554767e4d9a341831acd1ca2b3b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texture: {fileID: 0}
+  texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   textureWidth: 50
   textureHeight: 50
   brushSize: 10
@@ -1253,6 +1255,20 @@ MonoBehaviour:
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   slider: {fileID: 292701404}
   picker: {fileID: 1718933027}
+--- !u!114 &1279683520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279683514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c7cee89b7eea74e9463eff3c9fae04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintInit: {fileID: 1279683514}
+  texture: {fileID: 0}
 --- !u!1 &1345787626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,6 +1604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0ef169feab77a46ab66b324b1c62de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path: 
   canvas: {fileID: 1279683514}
 --- !u!1001 &1918731036
 PrefabInstance:

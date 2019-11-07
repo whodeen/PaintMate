@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets
 {
@@ -11,6 +6,7 @@ namespace Assets
     {
         public void DrawFigure(int size, Color color)
         {
+            //TODO: Code below works incorrect
             //int center = Mathf.FloorToInt(size / 2);
             //int radius = size / 2;
             //colors = new Color[size * size];

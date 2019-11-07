@@ -11,7 +11,7 @@ public class FileSaver : MonoBehaviour
 
     public void Save()
     {
-        var texture = canvas.GetComponent<Paint>().texture;
+        var texture = canvas.GetComponent<PaintInit>().texture;
         var bytes = texture.EncodeToPNG();
         path = EditorUtility.SaveFilePanel("Save file", "", "My texture", "png");
 
