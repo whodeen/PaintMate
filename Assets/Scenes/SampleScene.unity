@@ -556,7 +556,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1.114e-42, y: 6e-45, z: 2.4e-44, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0.16796875, z: 0.0078125, w: -0.0078125}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 978958988}
   - component: {fileID: 978958987}
   - component: {fileID: 978958986}
-  - component: {fileID: 978958989}
+  - component: {fileID: 978958990}
   m_Layer: 5
   m_Name: OpenFileButton
   m_TagString: Untagged
@@ -971,7 +971,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 978958989}
+      - m_Target: {fileID: 978958990}
         m_MethodName: Open
         m_Mode: 1
         m_Arguments:
@@ -1018,7 +1018,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978958984}
   m_CullTransparentMesh: 0
---- !u!114 &978958989
+--- !u!114 &978958990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1027,10 +1027,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 978958984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fbf8d914d4243b44b0314a22e81d142, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d01ca9bc1d54114da4c2a21f83ac034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
   image: {fileID: 0}
   imageAsset: {fileID: 0}
   paintCanvas: {fileID: 1279683514}
@@ -1474,7 +1473,7 @@ GameObject:
   - component: {fileID: 1877627203}
   - component: {fileID: 1877627202}
   - component: {fileID: 1877627201}
-  - component: {fileID: 1877627204}
+  - component: {fileID: 1877627205}
   m_Layer: 5
   m_Name: SaveFileButton
   m_TagString: Untagged
@@ -1545,7 +1544,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1877627204}
+      - m_Target: {fileID: 1877627205}
         m_MethodName: Save
         m_Mode: 1
         m_Arguments:
@@ -1592,7 +1591,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877627199}
   m_CullTransparentMesh: 0
---- !u!114 &1877627204
+--- !u!114 &1877627205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1601,10 +1600,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1877627199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0ef169feab77a46ab66b324b1c62de, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e35aed2ca5665d49a18b499211817bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
   canvas: {fileID: 1279683514}
 --- !u!1001 &1918731036
 PrefabInstance:

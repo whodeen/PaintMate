@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿
+using SFB;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +14,7 @@ public class FilePicker : MonoBehaviour
 
     public void Open()
     {
-        path = EditorUtility.OpenFilePanel("Load file", "", "png");
+        path = StandaloneFileBrowser.OpenFilePanel("Open file", "", "png", false).ToString();
         Debug.Log(path);
         if (path.Length != 0)
         {

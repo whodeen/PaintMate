@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Windows;
+using System.IO;
+using SFB;
 
 public class FileSaver : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class FileSaver : MonoBehaviour
     {
         var texture = canvas.GetComponent<PaintInit>().texture;
         var bytes = texture.EncodeToPNG();
-        path = EditorUtility.SaveFilePanel("Save file", "", "My texture", "png");
+        path = StandaloneFileBrowser.SaveFilePanel("Save file", "", "My texture", "png");
 
         if (path.Length > 0)
         {
